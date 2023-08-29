@@ -1,7 +1,9 @@
 import React from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { callAPI } from '../utils/CallApi'
+import { GB_CURRENCY } from '../utils/constants'
+import { ProductDetails } from './'
 
 function SearchResults() {
   const [searchParams] = useSearchParams()
@@ -33,9 +35,21 @@ function SearchResults() {
     <div className="min-w-[1200px] max-w-[1300px] m-auto pt-4">
       { products && products.map((product, key) => {
           return(
-            <div key={key}>
-              {product.title}
-            </div>
+            <Link key={key} to={`/product/${product.id}`}>
+              <div className="h-[250px] grid grid-cols-12 rounded mt-1 mb-1 ">
+                <div className="col-span-2 p-4 bg-gray-200">
+                  <img className="m-auto" src={product.image_small} alt="Search result product" />
+                </div>
+                <div className="col-span-10 bg-gray-50 border border-gray-100 hover:bg-amazonclone-light_blue ">
+                  <div className="font-medium text-black p-2">
+                    <ProductDetails product={product} ratings={true}/>
+                    <div className="text-xl xl:text-2xl pt-1">
+                      {GB_CURRENCY.format(product.price)}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
           )
         })
       }
