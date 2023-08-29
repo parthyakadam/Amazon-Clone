@@ -1,13 +1,17 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import { callAPI } from '../utils/CallApi'
 import { ProductDetails } from './'
 import { GB_CURRENCY } from '../utils/constants'
+import { addToCart } from '../redux/cartSlice'
 
 function ProductPage() {
     const { id } = useParams()
     const [product, setProduct] = useState(null)
+    const [quantity, setQuantity] = useState("1")
+    const dispatch = useDispatch()
 
     const getProduct = () => { 
         // calling callAPI function exported from utils/CallAPI file 
@@ -16,6 +20,11 @@ function ProductPage() {
             setProduct(productsResults[id])
         })
         // using the result/promise/returned data from callAPI function to set the Product state
+    }
+
+    const addQuantityToProduct = () => {
+        setProduct(product.quantity = quantity)
+        return product
     }
 
     useEffect(() => {
@@ -69,15 +78,20 @@ function ProductPage() {
                     </div>
                     <div className='text-base xl:text-lg mt-1'>
                         Quantity:
-                        <select className="p-2 bg-white border rounded-md focus:border-indigo-600">
+                        <select onChange={(event) => setQuantity(event.target.value)} className="p-2 bg-white border rounded-md focus:border-indigo-600">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
                         </select>
                     </div>
-                    <button className='bg-yellow-400 w-full p-3 mt-3 text-xs xl:text-sm rounded hover:bg-yellow-500'>
-                        Add to Cart
-                    </button>
+                    <Link to={'/checkout'}>
+                        <button
+                            //  sending the product object along with its quantity to addToCart function through dispatch to be processed further in the 'addToCart' reducer 
+                            onClick={() => dispatch(addToCart(addQuantityToProduct()))}
+                            className='bg-yellow-400 w-full p-3 mt-3 text-xs xl:text-sm rounded hover:bg-yellow-500'>
+                            Add to Cart
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
