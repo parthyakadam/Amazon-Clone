@@ -88,7 +88,8 @@ function ProductPage() {
                         <button
                             //  sending the product object along with its quantity to addToCart function through dispatch to be processed further in the 'addToCart' reducer 
                             onClick={() => dispatch(addToCart(addQuantityToProduct()))}
-                            className='bg-yellow-400 w-full p-3 mt-3 text-xs xl:text-sm rounded hover:bg-yellow-500'>
+                            className='btn'
+                        >
                             Add to Cart
                         </button>
                     </Link>
