@@ -1,8 +1,6 @@
 
 # Amazon Clone using React, Tailwind CSS & Redux Toolkit
 
-https://user-images.githubusercontent.com/17878339/231386523-1b0f7bb9-b83d-4a3e-a1bf-12405ebebbd2.png
-
 This repository contains a clone of the popular e-commerce platform Amazon, built using React.js, Tailwind CSS, and Redux Toolkit. The project aims to replicate key features of Amazon's user interface, providing a hands-on example of modern web development practices.
 
 ## Features
