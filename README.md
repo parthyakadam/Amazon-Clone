@@ -1,70 +1,70 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Amazon Clone using React, Tailwind CSS & Redux Toolkit
 
-## Available Scripts
+This repository contains a clone of the popular e-commerce platform Amazon, built using React.js, Tailwind CSS, and Redux Toolkit. The project aims to replicate key features of Amazon's user interface, providing a hands-on example of modern web development practices.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Product Listings:** Browse a wide range of products, including images, descriptions, prices, and ratings. The product data is fetched from a mock API for demonstration purposes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Product Details:** Clicking on a product takes the user to a detailed view with additional information.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Shopping Cart:** Users can add products to their shopping cart, view the items in the cart, and update quantities or remove products.
 
-### `npm test`
+- **Checkout Process:** Simulated the checkout process, with a summary of items, sub-toal and grand total cost.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In upcoming future, features like User Authentication, Payment Flow, Order History & Tracking, etx. can be added to make this app more robust and user-friendly.
+## Technologies Used
 
-### `npm run build`
+- **React.js:** The project is built using the React.js library, allowing for efficient component-based UI development.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Tailwind CSS:** Styling is accomplished using Tailwind CSS, providing a utility-first approach for creating responsive and visually appealing designs.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Redux Toolkit:** Redux Toolkit is employed for state management, ensuring a predictable and organized way to handle application-wide data.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Axios:** Axios is used for making HTTP requests to the mock API, enabling seamless communication between the front-end and the back-end.
 
-### `npm run eject`
+- **React Router:** The project utilizes React Router for handling client-side routing and navigation.
+## Run Locally
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Clone the project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  git clone https://github.com/parthyakadam/Amazon-Clone.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Go to the project directory
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+  cd my-app
+```
 
-## Learn More
+Install React, Tailwind CSS, Redux dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Start the server
 
-### Code Splitting
+```bash
+  npm run start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Instructions
 
-### Analyzing the Bundle Size
+Follow these steps to contribute in this project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**#Steps:**
 
-### Making a Progressive Web App
+    - Fork this repository
+    - Clone your forked repository
+    - Add your scripts
+    - Commit and push
+    - Create a pull request
+    - Star this repository
+    - Wait for pull request to merge
+  
+## Feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have any feedback, please feel free to reach out to me at parthvkadam531@gmail.com
